@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="springbootJpa:war">
+    <output-path>$USER_HOME$/Downloads/springbootShiro-master/springbootShiro-master/target</output-path>
+    <root id="archive" name="springbootJpa-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="springbootJpa:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,13 @@
+
+memcache :
+#  servers : 127.0.0.1:11211,192.168.140.137:11211,192.168.140.138:11211,192.168.140.139:11211
+  servers : 127.0.0.1:11211
+  failover : true
+  initConn : 10
+  minConn : 20
+  maxConn : 1000
+  maintSleep : 50
+  nagle : false
+  socketTO : 3000
+  aliveCheck : true
+#  weights : 1,1,1

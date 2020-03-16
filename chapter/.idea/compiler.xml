@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-zuul" />
+        <module name="auth-server" />
+        <module name="demo" />
+        <module name="eureka-customer" />
+        <module name="eureka-server" />
+        <module name="facelogin" />
+        <module name="feign-client" />
+        <module name="service-produce" />
+        <module name="serviceproduce" />
+        <module name="spart" />
+        <module name="spring-getaway" />
+        <module name="SpringBoot-Quartz" />
+        <module name="springboot_spart" />
+        <module name="springcloud-getaway" />
+        <module name="test-zuul-getaway" />
+        <module name="zipkin-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="api-zuul" target="1.8" />
+      <module name="chapter" target="1.5" />
+      <module name="demo" target="1.8" />
+      <module name="demo (1) (webscoket)" target="1.8" />
+      <module name="eureka-customer" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="facelogin" target="1.8" />
+      <module name="feign-client" target="1.8" />
+      <module name="service-produce" target="1.8" />
+      <module name="serviceproduce" target="1.8" />
+      <module name="spart" target="1.8" />
+      <module name="springcloud-getaway" target="1.8" />
+      <module name="test-zuul-getaway" target="1.8" />
+      <module name="zipkin-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

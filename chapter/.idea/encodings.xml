@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$USER_HOME$/Downloads/springboot-jwt-master/springboot-jwt-master" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/springbootShiro-master/springbootShiro-master" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-customer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/facelogin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-produce" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-produce-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-getaway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-zuul-getaway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/webscoket" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin-server" charset="UTF-8" />
+  </component>
+</project>

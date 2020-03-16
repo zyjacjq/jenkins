@@ -1,0 +1,88 @@
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+druid:
+  allow: #允许登陆的IP地址
+    ip: 127.0.0.1
+  login: #登陆的账户密码
+    user_name: root
+    password: root
+
+server:
+  port: 8090
+spring:
+  # thymeleaf页面模板配置
+  thymeleaf:
+     prefix: classpath:/templates/
+     suffix: .html
+  resources:
+    static-locations: classpath:/static/
+  profiles:
+    include: memcache,redis
+  application:
+    name: service-hii
+  zipkin :
+    base-url: http://localhost:9411
+#  sleuth :
+#    sampler :
+#      probability : 1.0
+#  cloud:
+#      config:
+#        server:
+#          git:
+#            uri: https://github.com/zyjacjq  #github 仓库地址
+#            search-paths: springboot-integration-examples-master #配置中心
+#            username:
+#            password:
+  datasource :
+    driver-class-name : com.mysql.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/shop
+    username : root
+    password : 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+#    click:
+#       driverClassName: ru.yandex.clickhouse.ClickHouseDriver
+#       url: jdbc:clickhouse://localhost:8123
+#       initialSize: 10
+#       maxActive: 100
+#       minIdle: 10
+#       maxWait: 6000
+#    filters: stat,wall,log4j不加监听不了sql监控，防火墙监控
+    filters: stat, wall,
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+mybatis :
+  type-aliases-package : chapter.forzp.entity
+  mapperLocations : classpath:mappers/*.xml
+logging:
+  level:
+    chapter:
+      forezp:
+        dao : debug
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+#memcache :
+#  servers : 127.0.0.1:11211,192.168.140.137:11211,192.168.140.138:11211,192.168.140.139:11211
+##  servers : 127.0.0.1:11211
+#  failover : true
+#  initConn : 10
+#  minConn : 20
+#  maxConn : 1000
+#  maintSleep : 50
+#  nagle : false
+#  socketTO : 3000
+#  aliveCheck : true
+#  weights : 1,1,1

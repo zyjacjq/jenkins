@@ -1,0 +1,34 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8763
+spring:
+  application:
+    name: service-hi
+    #对于rabbitMQ的支持
+  zipkin :
+    base-url: http://localhost:9411
+#  sleuth :
+#    sampler :
+#      probability : 1.0
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
+     #发送确认 对应RabbitTemplate.ConfirmCallback接口
+    publisher-confirms: true
+    #发送失败回退，对应RabbitTemplate.ReturnCallback接口
+    publisher-returns: true
+
+    #手动提交ack
+    listener:
+      direct:
+        #NONE（默认）：自动；AUTO：根据情况确认；MANUAL：手动确认
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
+

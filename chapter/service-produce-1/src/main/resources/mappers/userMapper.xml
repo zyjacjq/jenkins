@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="chapter.forezp.dao.UserMapper">
+
+<!-- 可根据自己的需求，是否要使用 -->
+<resultMap type="chapter.forezp.entity.User" id="UserMap">
+
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+
+</resultMap>
+
+
+
+<!--<select id="selectLibrarian" parameterType="INTEGER" resultMap="LibrarianMap">-->
+    <!--select *-->
+    <!--from t_librarian-->
+    <!--where 1=1-->
+    <!--and id = #{id,jdbcType=INTEGER}-->
+<!--</select>-->
+
+<select id="getAllUser" resultType="chapter.forezp.entity.User">
+    select * from user
+</select>
+
+<select id="getUserByUsername" resultMap="UserMap" parameterType="String">
+    select * from user where 1=1
+    <if test="username!=null and username!=''">
+        and username = #{username}
+    </if>
+</select>
+<select id="getresult" parameterType="java.util.Map" statementType="CALLABLE">
+    <![CDATA[{call addresult(#{idx,mode=IN,jdbcType=INTEGER},#{sum,mode=OUT,jdbcType=INTEGER})} ]]>
+</select>
+
+<select id="resultlist"  statementType="CALLABLE" resultMap="rm">
+    <![CDATA[{call resultlist()} ]]>
+</select>
+<resultMap id="rm" type="chapter.forezp.entity.User">
+    <result column="username" property="username"></result>
+    <result column="password" property="password"></result>
+</resultMap>
+
+
+
+</mapper>

@@ -1,0 +1,20 @@
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 6666
+spring:
+  application:
+    name: springcloud-getaway
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: qq_route
+#          uri: http://qq.com
+#          order: 2
+#          predicates:
+#            - Path=/qq
+#          filters:
+#            - AddResponseHeader=hello, Gateway
+
